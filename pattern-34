@@ -1,0 +1,38 @@
+//  Print the pattern
+
+/*
+   
+STDIN
+5
+
+Output:
+
+1
+2 6
+3 7 10
+4 8 11 13
+5 9 12 14 15
+*/
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+     Scanner in = new Scanner(System.in);
+     int n = in.nextInt();
+    
+    for(int i = 1; i<=n; i++){
+      int stepValue=n-1;
+      int currentVal = i;
+      System.out.print(i);
+      
+      for(int j = 1; j< i; j++){
+        currentVal= currentVal+stepValue;
+        System.out.print(" "+ (currentVal) );
+        stepValue--;
+      }
+      System.out.println();
+    }
+    
+    }
+  }
